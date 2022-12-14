@@ -20,6 +20,7 @@ export default defineNuxtConfig({
   },
   modules: [
     "nuxt-icon",
+    "@nuxt/image-edge",
     "@nuxtjs/google-fonts",
     "@nuxtjs/tailwindcss",
     "@vueuse/nuxt",
