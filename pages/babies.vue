@@ -4,8 +4,8 @@
       <h1 class="text-4xl font-black">My Furbabies</h1>
       <p>This is why we don't need kids.</p>
     </section>
-    <section class="grid md:grid-cols-3 gap-10 mt-10">
-      <div v-for="baby of babies" class="flex flex-col gap-4 group">
+    <section class="md:grid-cols-3 grid gap-10 mt-10">
+      <div v-for="baby of babies" class="group flex flex-col gap-4">
         <img
           :src="baby.image"
           :alt="baby.name"
@@ -24,7 +24,7 @@
               :class="baby.gender == 'm' ? 'text-blue-400' : 'text-pink-400'"
             />
           </p>
-          <p class="text-lg text-neutral-600 dark:text-neutral-500">
+          <p class="text-neutral-600 dark:text-neutral-500 text-lg">
             {{ baby.desc }}
           </p>
         </div>
@@ -37,21 +37,21 @@
 const babies = [
   {
     name: "Coco",
-    image: "Coco.jpeg",
+    image: "images/coco.jpeg",
     gender: "m",
     breed: "Pomeranian",
     desc: "Squeaky toy lover. Cuddles enthusiast. Doesn't really like new people.",
   },
   {
     name: "Melon",
-    image: "Melon.jpeg",
+    image: "images/melon.jpeg",
     gender: "f",
     breed: "Pomeranian",
     desc: '"I love chicken and beef. And I\'m very protective of mommy."',
   },
   {
     name: "Ebi",
-    image: "Ebi.jpeg",
+    image: "images/ebi.jpeg",
     gender: "m",
     breed: "Pomeranian",
     desc: "Fluffiness and chonkiness - 10/10 (rated by mommy)",
