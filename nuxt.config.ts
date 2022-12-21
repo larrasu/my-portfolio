@@ -17,18 +17,25 @@ export default defineNuxtConfig({
       ],
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     },
+    // pageTransition: {
+    //   name: "page",
+    //   mode: "out-in",
+    // },
   },
   modules: [
+    "nuxt-headlessui",
     "nuxt-icon",
     "@nuxt/image-edge",
     "@nuxtjs/google-fonts",
     "@nuxtjs/tailwindcss",
     "@vueuse/nuxt",
+    "@vueuse/motion/nuxt",
   ],
   googleFonts: {
     families: {
       Karla: [400, 700, 800, 900],
     },
   },
+  motion: {},
   ssr: false,
 });

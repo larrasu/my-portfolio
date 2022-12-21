@@ -1,13 +1,37 @@
 <template>
-  <main>
-    <section>
+  <main class="my-10">
+    <section
+      v-motion
+      :initial="{
+        y: 100,
+        opacity: 0,
+      }"
+      :enter="{
+        y: 0,
+        opacity: 1,
+      }"
+    >
       <h1 class="text-4xl font-black">Projects</h1>
       <p class="text-lg text-neutral-600 dark:text-neutral-500">
         Here are some of my projects.
       </p>
     </section>
     <section role="grid" class="projects">
-      <div role="article" class="project" v-for="project of projects">
+      <div
+        role="article"
+        class="project"
+        v-for="(project, index) in projects"
+        v-motion
+        :initial="{
+          y: 100,
+          opacity: 0,
+        }"
+        :enter="{
+          y: 0,
+          opacity: 1,
+        }"
+        :delay="index == 0 ? 200 : index * 300"
+      >
         <div class="project-image">
           <nuxt-img :src="project.image" :alt="project.title" />
         </div>

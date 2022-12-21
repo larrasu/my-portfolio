@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply scroll-smooth antialiased bg-rose-50 text-neutral-700 dark:text-rose-100 dark:bg-neutral-900 transition selection:bg-rose-300/50 selection:text-rose-400 dark:selection:bg-rose-50/50 dark:selection:text-rose-300;
+    @apply scroll-smooth antialiased bg-rose-50 text-neutral-700 dark:text-rose-100 dark:bg-neutral-900 transition duration-300 selection:bg-rose-300/50 selection:text-rose-400 dark:selection:bg-rose-50/50 dark:selection:text-rose-300;
   }
   h1,
   h2,
@@ -61,4 +61,6 @@
   .btn-icon {
     @apply flex items-center justify-center;
   }
+
+  /* Page */
 }
